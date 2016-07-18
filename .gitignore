@@ -1,0 +1,16 @@
+.project
+.idea
+wp-content/w3tc-config
+wp-content/cache
+wp-content/advanced-cache.php
+.DS_Store 
+/wp-content/uploads/*
+/wp-content/backups
+/nbproject/* 
+desktop.ini 
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+vendor/
+node_modules/
+*.bak
