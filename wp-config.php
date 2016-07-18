@@ -116,7 +116,7 @@ call_user_func(function()
 			define('DB_USER', 'irenesal_wrdp1');
 			define('DB_PASSWORD', 'bJMy4vKiZM4G');
 			define('DB_HOST', 'localhost');
-			define('FORCE_SSL_ADMIN', true);
+			
 		}
 	}
 });
