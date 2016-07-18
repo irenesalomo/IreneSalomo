@@ -1,32 +1,138 @@
 <?php
 /**
- * The base configurations of the WordPress.
+ * The base configuration for WordPress
  *
- * This file has the following configurations: MySQL settings, Table Prefix,
- * Secret Keys, WordPress Language, and ABSPATH. You can find more information
- * by visiting {@link http://codex.wordpress.org/Editing_wp-config.php Editing
- * wp-config.php} Codex page. You can get the MySQL settings from your web host.
+ * The wp-config.php creation script uses this file during the
+ * installation. You don't have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
  *
- * This file is used by the wp-config.php creation script during the
- * installation. You don't have to use the web site, you can just copy this file
- * to "wp-config.php" and fill in the values.
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://codex.wordpress.org/Editing_wp-config.php
  *
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'irenesal_wrdp1');
+/**
+ * Section: The base dir for wordpress
+ * =============================================================================
+ * WordPress needs to know where it is installed. Normally one of the last
+ * things that get defined in the standard wp-config.php file. However we have
+ * moved it up the chain a little bit. So that we can use it ourselves.
+ */
 
-/** MySQL database username */
-define('DB_USER', 'irenesal_wrdp1');
+if (!defined('ABSPATH')) define('ABSPATH', dirname(__FILE__).'/');
 
-/** MySQL database password */
-define('DB_PASSWORD', 'bJMy4vKiZM4G');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+/**
+ * Section: Environment Specific Configuration
+ * =============================================================================
+ * Here we define our database connection details and any other environment
+ * specific configuration. We use some simple environment detection so that
+ * we can easily define different values regardless of where we run.
+ */
 
+call_user_func(function()
+{
+	// This is where the magic happens
+	$env = function($host)
+	{
+		// Do we have a direct match with the hostname of the OS
+		if ($host == gethostname())
+		{
+			return true;
+		}
+
+		// NOTE: The HTTP_HOST can be spoofed, remove if super paranoid.
+		if (isset($_SERVER['HTTP_HOST']))
+		{
+			if ($host == $_SERVER['HTTP_HOST'])
+			{
+				return true;
+			}
+		}
+
+		// This next bit is stolen from Laravel's str_is helper
+		$pattern = '#^'.str_replace('\*', '.*', preg_quote($host, '#')).'\z#';
+
+		if ((bool) preg_match($pattern, gethostname()))
+		{
+			return true;
+		}
+
+		// NOTE: The HTTP_HOST can be spoofed, remove if super paranoid.
+		if (isset($_SERVER['HTTP_HOST']))
+		{
+			if ((bool) preg_match($pattern, $_SERVER['HTTP_HOST']))
+			{
+				return true;
+			}
+		}
+
+		// No match
+		return false;
+	};
+
+	// Here you can define as many `cases` or environments as you like.
+	// Here are the usual 3 for starters.
+
+	switch(true)
+	{
+		// Irene Local
+		case $env('nia-pc'):
+		{
+			define('FRUCTIFY_ENV', 'local');
+			define('DOMAIN_CURRENT_SITE', 'irenesalomo.au.dev.k-d.com.au');
+			define('DB_NAME', 'irenesal_wrdp1');
+			define('DB_USER', 'root');
+			define('DB_PASSWORD', 'root');
+			define('DB_HOST', 'localhost');
+			break;
+		}
+		
+		// Irene Home Local
+		case $env('Mack_Irene'):
+		{
+			define('FRUCTIFY_ENV', 'local');
+			define('DOMAIN_CURRENT_SITE', 'http://localhost/IreneSalomo/');
+			define('DB_NAME', 'irenesal_wrdp1');
+			define('DB_USER', 'root');
+			define('DB_PASSWORD', '');
+			define('DB_HOST', 'localhost');
+			break;
+		}
+
+		// Production
+		default:
+		{
+			define('FRUCTIFY_ENV', 'production');
+			define('DOMAIN_CURRENT_SITE', 'www.irenesalomo.com.au');
+			define('DB_NAME', 'irenesal_wrdp1');
+			define('DB_USER', 'irenesal_wrdp1');
+			define('DB_PASSWORD', 'bJMy4vKiZM4G');
+			define('DB_HOST', 'localhost');
+			define('FORCE_SSL_ADMIN', true);
+		}
+	}
+});
+
+/**
+ * Section: Database Charset and Collate
+ * =============================================================================
+ * If this is different across your environments I think you have some issues...
+ * Hence I have defined them outside of the above section.
+ */
+
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', 'utf8_unicode_ci');
+
+
+ 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 
