@@ -1,0 +1,35 @@
+@gutterWidth: 15px;
+@baseFontSize: 14px;
+
+/* Layout Break Points
+Extra small screen / phone / Under 480px
+*/
+
+@screen-xs: 480px;
+@screen-xs-min: @screen-xs;
+@screen-phone: @screen-xs-min;
+
+/* Small screen / tablet / From 480px to 767px */
+
+@screen-sm: 768px;
+@screen-sm-min: @screen-xs;
+@screen-tablet: @screen-xs-min;
+
+/* Medium screen / desktop / From 768px to 991px */
+
+@screen-md: 1000px;
+@screen-md-min: @screen-sm;
+@screen-desktop: @screen-md-min;
+
+/* Large screen / desktop / From 992px to 1199px */
+
+@screen-lg-min: 992px;
+@screen-xl: 1200px;
+
+/* So media queries don't overlap when required, provide a maximum */
+
+@screen-xs-max: (@screen-xs - 1);
+@screen-sm-max: (@screen-sm - 1);
+@screen-md-max: (@screen-lg-min - 1);
+@screen-lg-max: (@screen-xl - 1);
+@body-background: @color-white;

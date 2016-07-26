@@ -1,0 +1,46 @@
+.clearfix {
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.container {
+    width: 1020px;
+    padding-right: @gutterWidth;
+    padding-left: @gutterWidth;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    .clearfix();
+}
+
+@media (max-width: @screen-xs-max) {
+    .container {
+        width: auto;
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .container {
+        width: @screen-sm-min;
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    .container {
+        width: (@screen-md-min - (2 * @gutterWidth));
+    }
+}
+
+@media (min-width: @screen-lg-min) {
+    .container {
+        width: 1020px;
+    }
+}
