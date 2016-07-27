@@ -1,8 +1,11 @@
 /*This is for header part */
 
 .navbar {
-    background-color: @color-black;
+    background-color: @color-torquise;
     height: 40px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
 }
 
 .site-title,
@@ -18,4 +21,8 @@
 
 .header-background {
     .text-center();
+    
+    img{
+        .top-buffer-50();
+    }
 }

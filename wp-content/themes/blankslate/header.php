@@ -47,4 +47,5 @@
 
                 </section>
             </header>
-            <div class="container">
+            <div class="main-content">
+                <div class="container">
