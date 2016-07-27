@@ -12,16 +12,16 @@
     <body <?php body_class(); ?>>
         <div id="wrapper" class="hfeed">
             <header id="header" role="banner">
-                <section id="branding">
+                <section class="navbar">
                     <div class="container">
                         <div id="site-title">
-                            <h1>
+                            <h1 class="site-title">
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
                                     <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
                                 </a>
                             </h1>
                         </div>
-                        <div id="site-description">
+                        <div class="site-description">
                             <?php bloginfo( 'description' ); ?>
                         </div>
                     </div>
