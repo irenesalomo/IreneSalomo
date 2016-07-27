@@ -73,9 +73,18 @@
     {
         if ( !is_admin() ) {
         global $id;
-        $comments_by_type = &separate_comments( get_comments( 'status=approve&post_id=' . $id ) );
+        $comments_by_type = separate_comments( get_comments( 'status=approve&post_id=' . $id ) );
         return count( $comments_by_type['comment'] );
         } else {
         return $count;
         }
     }
+
+    // Add support for custom headers.
+    $custom_header_support = array(
+        'default-image' => get_template_directory_uri() . '/assets/images/header.jpg',
+        'flex-height'   => true,
+        'flex-weight'   => true, 
+        'uploads'       => true,
+    );
+    add_theme_support('custom-header',$custom_header_support);
