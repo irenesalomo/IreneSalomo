@@ -14,24 +14,33 @@
             <header id="header" role="banner">
                 <section class="navbar">
                     <div class="container">
-                        <div id="site-title">
-                            <h1 class="site-title">
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
-                                    <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
-                                </a>
-                            </h1>
+                        <div class="row">
+                            <div class="col col-lg-5">
+                                <div class="site-title">
+                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
+                                        <?php echo esc_html( get_bloginfo( 'name' ) ); ?> &ndash;
+                                            <?php bloginfo( 'description' ); ?>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col col-lg-7">
+                                <div class="row" role="navigation">
+                                    <div class="col col-lg-4 search">
+                                        <?php get_search_form(); ?>
+                                    </div>
+                                    <div class="col col-lg-4">
+                                        <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 
+                                        'menu_class' => 'header-menu-list' ) ); ?>
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="site-description">
-                            <?php bloginfo( 'description' ); ?>
-                        </div>
+
                     </div>
 
                 </section>
-                <nav id="menu" role="navigation">
-                    <div id="search">
-                        <?php get_search_form(); ?>
-                    </div>
-                    <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-                </nav>
+
             </header>
             <div class="container">

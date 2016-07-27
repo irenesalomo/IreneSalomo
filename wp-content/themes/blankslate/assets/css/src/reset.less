@@ -79,12 +79,15 @@ time,
 mark,
 audio,
 video {
-    font-size: 100%;
-    font: inherit;
     padding: 0;
     border: 0;
     margin: 0;
-    vertical-align: baseline;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -93,7 +96,7 @@ body {
     font: 14px/1 Verdana, Geneva, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: inherit;
+    color: @color-base-text;
 }
 
 ol,
