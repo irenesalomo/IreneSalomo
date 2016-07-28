@@ -1,0 +1,4 @@
+- insert icon from awesomefont before entry date
+- fix nav menu on header
+- vertical align the blog entry
+
