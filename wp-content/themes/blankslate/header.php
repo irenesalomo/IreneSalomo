@@ -15,7 +15,7 @@
                 <section class="navbar">
                     <div class="container">
                         <div class="row">
-                            <div class="col col-lg-5">
+                            <div class="col col-lg-6">
                                 <div class="site-title">
                                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
                                         <?php echo esc_html( get_bloginfo( 'name' ) ); ?> &ndash;
@@ -23,7 +23,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col col-lg-7">
+                            <div class="col col-lg-6">
                                 <div class="row" role="navigation">
                                     <div class="col col-lg-4 search">
                                         <?php get_search_form(); ?>

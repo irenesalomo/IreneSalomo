@@ -1,0 +1,12 @@
+.include-custom-font(@fontname, @fontfilename, @fontweight, @fontstyle) {
+    @font-face {
+        font-family: '@{fontname}';
+        src: url('../../fonts/@{fontfilename}/@{fontfilename}.eot');
+        src: url('../../fonts/@{fontfilename}/@{fontfilename}.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/@{fontfilename}/@{fontfilename}.woff') format('woff'),
+        url('../../fonts/@{fontfilename}/@{fontfilename}.ttf') format('truetype'),
+        url('../../fonts/@{fontfilename}/@{fontfilename}.svg#@{fontname}') format('svg');
+        font-weight: @fontweight;
+        font-style: @fontstyle;
+    }
+}
