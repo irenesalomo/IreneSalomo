@@ -7,5 +7,6 @@
                         <?php get_template_part( 'nav', 'below' ); ?>
     </section>
     </div>
+    </div>
     <?php get_sidebar(); ?>
         <?php get_footer(); ?>

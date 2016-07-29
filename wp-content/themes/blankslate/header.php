@@ -47,5 +47,6 @@
 
                 </section>
             </header>
-            <div class="main-content">
-                <div class="container">
+            <div class="main-content-wrapper clearfix">
+                <div class="main-content">
+                    <div class="container">

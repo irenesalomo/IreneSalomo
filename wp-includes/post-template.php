@@ -263,7 +263,7 @@ function get_the_content( $more_link_text = null, $strip_teaser = false ) {
 	$post = get_post();
 
 	if ( null === $more_link_text )
-		$more_link_text = __( '(more&hellip;)' );
+		$more_link_text = __( 'Read More' );
 
 	$output = '';
 	$has_teaser = false;
@@ -310,7 +310,7 @@ function get_the_content( $more_link_text = null, $strip_teaser = false ) {
 				 * @param string $more_link_element Read More link element.
 				 * @param string $more_link_text    Read More text.
 				 */
-				$output .= apply_filters( 'the_content_more_link', ' <a href="' . get_permalink() . "#more-{$post->ID}\" class=\"more-link\">$more_link_text</a>", $more_link_text );
+				$output .= apply_filters( 'the_content_more_link', '<div class="more-div"><a href="' . get_permalink() . "#more-{$post->ID}\" class=\"more-link\">$more_link_text</a></div>", $more_link_text );
 			$output = force_balance_tags( $output );
 		}
 	}
