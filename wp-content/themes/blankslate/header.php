@@ -14,27 +14,26 @@
             <header id="header" role="banner">
                 <section class="navbar">
                     <div class="navbar-container">
-                                <div class="site-title">
-                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
-                                        <?php echo esc_html( get_bloginfo( 'name' ) ); ?> &ndash;
-                                            <?php bloginfo( 'description' ); ?>
-                                    </a>
-                                </div>
-                           
-                            
-                                <div class="row" role="navigation">
-                                    <div class="col col-lg-4 search">
-                                        <?php get_search_form(); ?>
-                                    </div>
-                                    <div class="col col-lg-4">
-                                        <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 
+                        <div class="site-title">
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
+                                <?php echo esc_html( get_bloginfo( 'name' ) ); ?> &ndash;
+                                    <?php bloginfo( 'description' ); ?>
+                            </a>
+                        </div>
+
+                        <div class="site-navigation" role="navigation">
+                            <div class="site-search">
+                                <?php get_search_form(); ?>
+                            </div>
+                            <div class="site-menu">
+                                <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 
                                         'menu_class' => 'header-menu-list' ) ); ?>
-                                    </div>
+                            </div>
 
-                                </div>
-                            
+                        </div>
 
-                        
+
+
 
                     </div>
 
