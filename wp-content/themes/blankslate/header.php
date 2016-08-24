@@ -22,13 +22,16 @@
                         </div>
 
                         <div class="site-navigation" role="navigation">
-                            <div class="site-search">
-                                <?php get_search_form(); ?>
-                            </div>
                             <div class="site-menu">
-                                <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 
-                                        'menu_class' => 'header-menu-list' ) ); ?>
+                                About Me
+                                <!--<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 
+                                        'menu_class' => 'header-menu-list' ) ); ?>-->
                             </div>
+                            <div class="site-search">
+                                <i class="fa fa-search"></i>
+                                <!--<?php get_search_form(); ?>-->
+                            </div>
+                            
 
                         </div>
 

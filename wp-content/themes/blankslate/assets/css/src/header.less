@@ -16,18 +16,31 @@
 .site-title,
 .site-navigation {
     color: @color-white;
-    .top-buffer-8();
-    .bottom-buffer-8();
+    width: 20%;
 }
 
 .site-title{
     float: left;
+    .top-buffer-8();
+    .bottom-buffer-8();
 }
 
 .site-navigation{
-    float: right;
-    width: 20%;
+    float: right;    
 }
+
+.site-search, .site-menu{
+    cursor: pointer;
+    display: inline-block;
+}
+
+.site-menu{
+    border-right: 1px solid @color-creme;
+    height: 40px;
+    padding: 8px 8px 8px 0px;
+}
+
+
 
 .header-menu-list {
     color: @color-white;
