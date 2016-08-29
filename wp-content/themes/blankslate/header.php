@@ -16,20 +16,24 @@
                     <div class="navbar-container">
                         <div class="site-title">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
-                                <?php echo esc_html( get_bloginfo( 'name' ) ); ?> &ndash;
+                                <span><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span> &ndash;
                                     <?php bloginfo( 'description' ); ?>
                             </a>
                         </div>
 
                         <div class="site-navigation" role="navigation">
-                            <div class="site-menu">
+                            <div class="navigation-aboutme">
                                 About Me
                                 <!--<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 
                                         'menu_class' => 'header-menu-list' ) ); ?>-->
                             </div>
-                            <div class="site-search">
+                            <div class="navigation-search">
                                 <i class="fa fa-search"></i>
-                                <!--<?php get_search_form(); ?>-->
+                                
+                            </div>
+                            <div class="navigation-subscribe">
+                                <i class="fa fa-envelope"></i>
+                                
                             </div>
                             
 
