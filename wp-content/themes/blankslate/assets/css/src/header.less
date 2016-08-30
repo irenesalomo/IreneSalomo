@@ -14,9 +14,10 @@
 }
 
 .site-title,
-.site-navigation {
+.site-navigation, 
+.mobile-navigation{
     color: @color-white;
-    width: 20%;
+    width: auto;
 }
 
 .site-title{
@@ -29,20 +30,33 @@
     }
 }
 
-.site-navigation{
+.site-navigation, 
+.mobile-navigation{
     float: right;    
 }
 
-.navigation-search, .navigation-aboutme, .navigation-subscribe{
+.navigation{
     cursor: pointer;
-    display: inline-block;
-}
-
-.navigation-aboutme{
+    float: left;
     border-right: 1px solid @color-creme;
     height: 40px;
-    padding: 8px 8px 8px 0px;
+    padding: 8px 16px;
+    
+    &:first-child{
+        padding-left: 0px;
+    }
+    &:last-child{
+        border-right: none;
+        padding-right: 0px;
+    }
+    &:hover{
+        text-decoration: underline;
+    }
 }
+
+/*.navigation-search, .navigation-subscribe{
+    padding-top: 6px;
+}*/
 
 
 

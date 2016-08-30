@@ -22,21 +22,31 @@
                         </div>
 
                         <div class="site-navigation" role="navigation">
-                            <div class="navigation-aboutme">
+                            <div class="navigation navigation-aboutme">
                                 About Me
                                 <!--<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 
                                         'menu_class' => 'header-menu-list' ) ); ?>-->
                             </div>
-                            <div class="navigation-search">
+                            <div class="navigation navigation-contact">
+                                Contact
+                            </div>
+                            <div class="navigation navigation-categories">
+                                Categories
+                            </div>
+                            <div class="navigation navigation-search">
                                 <i class="fa fa-search"></i>
                                 
                             </div>
-                            <div class="navigation-subscribe">
+                            <div class="navigation navigation-subscribe">
                                 <i class="fa fa-envelope"></i>
                                 
                             </div>
                             
 
+                        </div>
+                        
+                        <div class="mobile-navigation" role="navigation">
+                            <div class="fa fa-lg fa-bars"></div>
                         </div>
 
 
