@@ -45,7 +45,7 @@
 
                         </div>
                         
-                        <div class="mobile-navigation" role="navigation">
+                        <div class="display-md mobile-navigation" role="navigation">
                             <div class="fa fa-lg fa-bars"></div>
                         </div>
 

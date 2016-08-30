@@ -9,6 +9,10 @@
     }
 }
 
+.display-md{
+    display: none;
+}
+
 .top-buffer-8 {
     margin-top: 8px;
 }
@@ -55,4 +59,12 @@
 
 .bottom-border-standard {
     border-bottom: 5px solid @color-torquise;
+}
+
+//max-width: 991px
+@media (max-width: @screen-md-max) {
+    .display-md{
+        display: block;
+    }
+    
 }

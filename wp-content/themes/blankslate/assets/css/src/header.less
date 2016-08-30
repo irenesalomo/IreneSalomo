@@ -18,6 +18,7 @@
 .mobile-navigation{
     color: @color-white;
     width: auto;
+    cursor: pointer;
 }
 
 .site-title{
@@ -35,10 +36,15 @@
     float: right;    
 }
 
+.mobile-navigation{
+    padding-top: 6px;
+}
+
+
+
 .navigation{
-    cursor: pointer;
     float: left;
-    border-right: 1px solid @color-creme;
+    border-right: 1px solid @color-bg;
     height: 40px;
     padding: 8px 16px;
     
@@ -54,12 +60,6 @@
     }
 }
 
-/*.navigation-search, .navigation-subscribe{
-    padding-top: 6px;
-}*/
-
-
-
 .header-menu-list {
     color: @color-white;
 }
@@ -70,4 +70,12 @@
     img{
         .top-buffer-50();
     }
+}
+
+//max-width: 991px
+@media (max-width: @screen-md-max) {
+    .site-navigation{
+        display: none;
+    }
+    
 }
