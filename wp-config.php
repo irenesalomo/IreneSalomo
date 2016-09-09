@@ -83,8 +83,8 @@ call_user_func(function()
 
 	switch(true)
 	{
-		// Irene Local
-		case $env('nia-pc'):
+		// Irene Localtest
+		case $env('*Irene*'):
 		{
 			define('FRUCTIFY_ENV', 'local');
 			define('DOMAIN_CURRENT_SITE', 'irenesalomo.au.dev.k-d.com.au');

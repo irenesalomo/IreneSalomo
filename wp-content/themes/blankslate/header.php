@@ -55,11 +55,6 @@
                     </div>
 
                 </section>
-
-                <section class="header-background">
-                    <img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo('name')); ?>" />
-
-                </section>
             </header>
             <div class="main-content-wrapper clearfix">
                 <div class="main-content">
