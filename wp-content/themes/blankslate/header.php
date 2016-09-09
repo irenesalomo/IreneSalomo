@@ -17,7 +17,7 @@
                         <div class="site-title">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
                                 <span><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span> &ndash;
-                                    <?php bloginfo( 'description' ); ?>
+                                <?php bloginfo( 'description' ); ?>
                             </a>
                         </div>
 
@@ -35,25 +35,20 @@
                             </div>
                             <div class="navigation navigation-search">
                                 <i class="fa fa-search"></i>
-                                
+
                             </div>
                             <div class="navigation navigation-subscribe">
                                 <i class="fa fa-envelope"></i>
-                                
                             </div>
-                            
-
                         </div>
-                        
                         <div class="display-md mobile-navigation" role="navigation">
                             <div class="fa fa-lg fa-bars"></div>
                         </div>
-
-
-
-
                     </div>
-
+                </section>
+                
+                <section class="header-intro container container-content">
+                    test blablablabla
                 </section>
             </header>
             <div class="main-content-wrapper clearfix">
