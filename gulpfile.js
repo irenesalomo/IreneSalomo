@@ -5,7 +5,7 @@ var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
-var THEME_ROOT = 'wp-content/themes/blankslate/';
+var THEME_ROOT = 'wp-content/themes/irenesalomo/';
 
 gulp.task('less', function () {
     return gulp.src(THEME_ROOT + 'assets/css/src/main.less')
