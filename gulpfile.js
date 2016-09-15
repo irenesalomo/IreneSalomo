@@ -5,6 +5,7 @@ var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
+var gulpUtil = require('gulp-util');
 var THEME_ROOT = 'wp-content/themes/irenesalomo/';
 
 gulp.task('less', function () {
@@ -31,7 +32,8 @@ gulp.task('js', function () {
       ])
         .pipe(uglify({
             mangle: true
-        }))
+        }).on('error', gulpUtil.log))
+    //.pipe(uglify().on('error', gulpUtil.log)) // notice the error event here
         .pipe(rename({
             extname: '.min.js'
         }))
