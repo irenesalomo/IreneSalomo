@@ -1,0 +1,5 @@
+- insert icon from awesomefont before entry date, comment etc
+- fix nav menu on header
+- vertical align the header image with blog entry
++ add .more-link hover behavior
+

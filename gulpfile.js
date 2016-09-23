@@ -28,7 +28,7 @@ gulp.task('watch', function () { // Watch .scss files
 
 gulp.task('js', function () {
     return gulp.src([
-        THEME_ROOT + '/assets/js/src/main.js',
+        THEME_ROOT + 'assets/js/src/main.js',
       ])
         .pipe(uglify({
             mangle: true
@@ -37,7 +37,7 @@ gulp.task('js', function () {
         .pipe(rename({
             extname: '.min.js'
         }))
-        .pipe(gulp.dest(THEME_ROOT + '/assets/js'));
+        .pipe(gulp.dest(THEME_ROOT + 'assets/js'));
 });
 
 gulp.task('bump-version', function () {

@@ -8,7 +8,7 @@ $theme_uri = get_template_directory_uri();
 </div>
 </footer>
 </div>
-<script data-main="<?php _e($theme_uri) ?>/assets/js/main.min" src="<?php _e($theme_uri) ?>/assets/js/require.js"></script>
+<script data-main="<?php _e($theme_uri) ?>/assets/js/main.min.js" src="<?php _e($theme_uri) ?>/assets/js/require.js"></script>
 <script>
 		window.baseurl = '/wp-content/themes/irenesalomo/assets/js/';
 
