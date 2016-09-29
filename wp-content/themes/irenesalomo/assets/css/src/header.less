@@ -80,14 +80,22 @@
 
 //max-width: 991px
 @media (max-width: @screen-md-max) {
-    .site-navigation{
-        //display: none;
+    .navigation-container{
+       height: 0;
+    }
+    
+    .navigation-container--mobile{
+        height: 180px!important;
+        position: absolute;
+        right: 0px;
+        display: block;
     }
     
     .site-navigation--mobile{
-        height: 180px;
+        /*height: 180px!important;
         position: absolute;
         right: 0px;
+        display: block;*/
     }
     
     .navigation{

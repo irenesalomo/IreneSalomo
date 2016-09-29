@@ -22,33 +22,42 @@
                         </div>
 
                         <div class="site-navigation" role="navigation">
-                            <div class="navigation navigation-aboutme">
-                                About Me
-                                <!--<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 
-                                        'menu_class' => 'header-menu-list' ) ); ?>-->
-                            </div>
-                            <div class="navigation navigation-contact">
-                                Contact
-                            </div>
-                            <div class="navigation navigation-categories">
-                                Categories
-                            </div>
-                            <div class="navigation navigation-search">
-                                <i class="fa fa-search"></i>
+                            <div class="navigation-container">
+                                <div class="navigation navigation-aboutme">
+                                    About Me
+                                    <!--<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 
+                                            'menu_class' => 'header-menu-list' ) ); ?>-->
+                                </div>
+                                <div class="navigation navigation-contact">
+                                    Contact
+                                </div>
+                                <div class="navigation navigation-categories">
+                                    Categories
+                                </div>
+                                <div class="navigation navigation-search">
+                                    <i class="fa fa-search"></i>
 
+                                </div>
+                                <div class="navigation navigation-subscribe">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
                             </div>
-                            <div class="navigation navigation-subscribe">
-                                <i class="fa fa-envelope"></i>
+                            <div class="display-md mobile-navigation" role="navigation">
+                                <div class="fa fa-lg fa-bars"></div>
                             </div>
                         </div>
-                        <div class="display-md mobile-navigation" role="navigation">
-                            <div class="fa fa-lg fa-bars"></div>
-                        </div>
+                            
+                       
                     </div>
                 </section>
                 
                 <section class="header-intro container container-content">
-                    test blablablabla
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="<?php _e($theme_uri); ?>/assets/images/header.jpg">
+                        <source media="(max-width: 1199px)" srcset="<?php _e($theme_uri); ?>/assets/images/header2.jpg">
+                        <img src="/assets/images/header.jpg" alt="mountain background">
+                    </picture>
+                    
                 </section>
             </header>
             <div class="main-content-wrapper clearfix">
